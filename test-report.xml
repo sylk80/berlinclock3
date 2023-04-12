@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/templatefeature.steps.js">
+    <testCase name="Is this a template for jumpstart? I hace created a jumpstart" duration="1"/>
+  </file>
+</testExecutions>
