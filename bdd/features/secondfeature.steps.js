@@ -12,7 +12,6 @@ const {
 const { show_berlinclock } = require('../../src/clockwork')
 
 const { mockDateSecond} = require("../../__tests__/mocktime")
-const {get} = require("lodash");
 
 let greeting
 let dateSpy

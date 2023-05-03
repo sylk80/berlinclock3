@@ -77,4 +77,34 @@ describe('BerlinClock testing for second row...', () => {
         clockwork2.addFiveHours()
         expect(clockwork2.rows[1][0]).toStrictEqual("R");
     });
+    test('Berlin clock with time 10:00:00 should have R in second rows second element...', () => {
+        const clockwork2 = new Clockwork();
+        clockwork2.time.setHours(10)
+        clockwork2.addFiveHours()
+        expect(clockwork2.rows[1][1]).toStrictEqual("R");
+    });
+    test('Berlin clock with time 15:00:00 should have R in second rows third element...', () => {
+        const clockwork2 = new Clockwork();
+        clockwork2.time.setHours(15)
+        clockwork2.addFiveHours()
+        expect(clockwork2.rows[1][2]).toStrictEqual("R");
+    });
+    test('Berlin clock with time 20:00:00 should have R in second rows third element...', () => {
+        const clockwork2 = new Clockwork();
+        clockwork2.time.setHours(20)
+        clockwork2.addFiveHours()
+        expect(clockwork2.rows[1][3]).toStrictEqual("R");
+    });
+    test('Berlin clock with time 23:59:59 should have R in second rows all element...', () => {
+        const clockwork2 = new Clockwork();
+        clockwork2.time.setHours(23,59,59)
+        clockwork2.addFiveHours()
+        expect(clockwork2.rows[1]).toStrictEqual(["R","R","R","R"]);
+    });
+    test('Berlin clock with time 00:00:00 should have R in second rows all element...', () => {
+        const clockwork2 = new Clockwork();
+        clockwork2.time.setHours(0,0,0)
+        clockwork2.addFiveHours()
+        expect(clockwork2.rows[1]).toStrictEqual(["O","O","O","O"]);
+    });
 });

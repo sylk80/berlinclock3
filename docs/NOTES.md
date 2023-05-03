@@ -130,6 +130,17 @@ Berlin clock with time 05:00:00 should have R in second row first element
 :heavy_exclamation_mark: And second row's first two/three/four element is R
 
 
+### Unit tests
+
+
+Berlin clock's second row has 4 length
+Berlin clock with time 10:xx:xx should have R in second row second element
+Berlin clock with time 15:xx:xx should have R in second row third element
+Berlin clock with time 20:xx:xx should have R in second row fourth element
+Berlin clock with time 23:59:59 should have R in second row all element
+Berlin clock with time 00:00:00 should have O in second row all element
+
+
 
 
 

@@ -49,7 +49,7 @@ When('I request the time for 05:00:00', () => {
     greeting = show_berlinclock()
 })
 
-Then('the second row is ON', () => {
+Then('the second row is ON with 1 light', () => {
     expect(greeting[1]).toStrictEqual(["R","O","O","O"])
 })
 
@@ -66,7 +66,7 @@ When('I request the time for 10:00:00', () => {
     greeting = show_berlinclock()
 })
 
-Then('the second row is ON', () => {
+Then('the second row is ON with 2 lights', () => {
     expect(greeting[1]).toStrictEqual(["R","R","O","O"])
 })
 
@@ -83,7 +83,7 @@ When('I request the time for 15:00:00', () => {
     greeting = show_berlinclock()
 })
 
-Then('the second row is ON', () => {
+Then('the second row is ON with 3 lights', () => {
     expect(greeting[1]).toStrictEqual(["R","R","R","O"])
 })
 
@@ -100,7 +100,7 @@ When('I request the time for 20:00:00', () => {
     greeting = show_berlinclock()
 })
 
-Then('the second row is ON', () => {
+Then('the second row is ON with 4 lights', () => {
     expect(greeting[1]).toStrictEqual(["R","R","R","R"])
 })
 
