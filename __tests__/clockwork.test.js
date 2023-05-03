@@ -1,7 +1,7 @@
 const { Clockwork, show_berlinclock} = require('../src/clockwork.js');
 const lang = require('lodash/lang');
 
-describe('BerlinClock testing...', () => {
+describe('BerlinClock testing for first row...', () => {
     const clockwork = new Clockwork();
     clockwork.addSeconds()
     test('should be a Clockwork class...', () => {
@@ -51,3 +51,11 @@ describe('BerlinClock testing...', () => {
         expect(clockwork5.rows[0]).toStrictEqual(["Y"]);
     });
   });
+
+
+describe('BerlinClock testing for second row...', () => {
+    const clockwork = new Clockwork();
+    test('berlin clock\'s second row has 4 length', () => {
+        expect(clockwork.rows[1]).toHaveLength(4);
+    });
+});
