@@ -11,4 +11,22 @@ And the second row is filled with O
     Given the API endpoint /time
     When I request the time for 05:00:00
     Then the second row is ON
-    And the second row's first element is Y
+    And the second row's first element is R
+
+  Scenario: Its is at the second five hours
+    Given the API endpoint /time
+    When I request the time for 10:00:00
+    Then the second row is ON
+    And the second row's second element is R
+
+  Scenario: Its is at the third five hours
+    Given the API endpoint /time
+    When I request the time for 15:00:00
+    Then the second row is ON
+    And the second row's third element is R
+
+  Scenario: Its is at the fourth five hours
+    Given the API endpoint /time
+    When I request the time for 20:00:00
+    Then the second row is ON
+    And the second row's fourth element is R

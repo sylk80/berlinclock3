@@ -110,14 +110,24 @@ At 00:00:58 light is on - Y
 
 :heavy_exclamation_mark: Then the second row is OFF/ON
 
-:heavy_exclamation_mark: And the second row is filled with O/ second row's first element is Y
+:heavy_exclamation_mark: And the second row is filled with O/ second row's first element is R
 
 ### Unit tests
 
 
 Berlin clock's second row has 4 length
 Berlin clock with time 04:xx:xx should have O in second row first element
-Berlin clock with time 05:00:00 should have Y in second row first element
+Berlin clock with time 05:00:00 should have R in second row first element
+
+### Component 5/6/7
+
+:heavy_plus_sign: Given the API endpoint /time
+
+:construction: When I request the time for 10:00:00/15:00:00/20:00:00
+
+:heavy_exclamation_mark: Then the second row is ON
+
+:heavy_exclamation_mark: And second row's first two/three/four element is R
 
 
 

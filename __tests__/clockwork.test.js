@@ -71,10 +71,10 @@ describe('BerlinClock testing for second row...', () => {
         clockwork2.addFiveHours()
         expect(clockwork2.rows[1][0]).toStrictEqual("O");
     });
-    test('Berlin clock with time 05:00:00 should have Y in second rows first element...', () => {
+    test('Berlin clock with time 05:00:00 should have R in second rows first element...', () => {
         const clockwork2 = new Clockwork();
         clockwork2.time.setHours(5)
         clockwork2.addFiveHours()
-        expect(clockwork2.rows[1][0]).toStrictEqual("Y");
+        expect(clockwork2.rows[1][0]).toStrictEqual("R");
     });
 });

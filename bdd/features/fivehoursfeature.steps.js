@@ -50,11 +50,62 @@ When('I request the time for 05:00:00', () => {
 })
 
 Then('the second row is ON', () => {
-    expect(greeting[1]).toStrictEqual(["Y","O","O","O"])
+    expect(greeting[1]).toStrictEqual(["R","O","O","O"])
 })
 
-And('the second row\'s first element is Y', () => {
-    expect(greeting[1][0]).toBe("Y")
+And('the second row\'s first element is R', () => {
+    expect(greeting[1][0]).toBe("R")
+})
+
+Given('the API endpoint /time', () => {})
+
+When('I request the time for 10:00:00', () => {
+    mockDateHours(hourSpy,10)
+    mockDateMinutes(minuteSpy,0)
+    mockDateSecond(secondSpy,0)
+    greeting = show_berlinclock()
+})
+
+Then('the second row is ON', () => {
+    expect(greeting[1]).toStrictEqual(["R","R","O","O"])
+})
+
+And('the second row\'s second element is R', () => {
+    expect(greeting[1][1]).toBe("R")
+})
+
+Given('the API endpoint /time', () => {})
+
+When('I request the time for 15:00:00', () => {
+    mockDateHours(hourSpy,15)
+    mockDateMinutes(minuteSpy,0)
+    mockDateSecond(secondSpy,0)
+    greeting = show_berlinclock()
+})
+
+Then('the second row is ON', () => {
+    expect(greeting[1]).toStrictEqual(["R","R","R","O"])
+})
+
+And('the second row\'s third element is R', () => {
+    expect(greeting[1][2]).toBe("R")
+})
+
+Given('the API endpoint /time', () => {})
+
+When('I request the time for 20:00:00', () => {
+    mockDateHours(hourSpy,20)
+    mockDateMinutes(minuteSpy,0)
+    mockDateSecond(secondSpy,0)
+    greeting = show_berlinclock()
+})
+
+Then('the second row is ON', () => {
+    expect(greeting[1]).toStrictEqual(["R","R","R","R"])
+})
+
+And('the second row\'s fourth element is R', () => {
+    expect(greeting[1][3]).toBe("R")
 })
 
 After(() => {

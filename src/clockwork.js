@@ -12,7 +12,7 @@ class Clockwork {
     addFiveHours() {
         this.rows[1] = ["O","O","O","O"]
         if(this.time.getHours() === 5 ) {
-            this.rows[1][0] = "Y"
+            this.rows[1][0] = "R"
         }
     }
 
