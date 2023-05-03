@@ -12,8 +12,7 @@ class Clockwork {
     addFiveHours() {
         let hours = this.time.getHours();
         for(let hourindex = 0 ; hourindex < 4 ; hourindex++) {
-            let value = hours - 5 >= 0 ? "R" : "O"
-            this.rows[1][hourindex] = value
+            this.rows[1][hourindex] = hours - 5 >= 0 ? "R" : "O"
             hours = hours -5
         }
     }
