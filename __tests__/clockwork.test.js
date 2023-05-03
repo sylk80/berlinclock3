@@ -55,6 +55,7 @@ describe('BerlinClock testing for first row...', () => {
 
 describe('BerlinClock testing for second row...', () => {
     const clockwork = new Clockwork();
+    clockwork.addFiveHours()
     test('berlin clock\'s second row has 4 length', () => {
         expect(clockwork.rows[1]).toHaveLength(4);
     });

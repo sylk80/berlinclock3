@@ -33,7 +33,7 @@ When('I request the time for 04:59:59', () => {
 })
 
 Then('the second row is OFF', () => {
-    expect(greeting[1]).toBe(["O","0","0","0"])
+    expect(greeting[1]).toStrictEqual(["O","O","O","O"])
 })
 
 And('the second row is filled with O', () => {
