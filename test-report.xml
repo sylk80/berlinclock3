@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/templatefeature.steps.js">
-    <testCase name="Is this a template for jumpstart? I hace created a jumpstart" duration="1"/>
+  <file path="/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/fivehoursfeature.steps.js">
+    <testCase name="Berlin clock second row display Its is below the first five hours" duration="2">
+      <failure message="TypeError: mockDateHours is not a function"><![CDATA[TypeError: mockDateHours is not a function
+    at Object.stepFunction (/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/fivehoursfeature.steps.js:29:5)
+    at /home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/node_modules/jest-cucumber/src/feature-definition-creation.ts:134:65
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
+    </testCase>
+  </file>
+  <file path="/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/secondfeature.steps.js">
+    <testCase name="Berlin clock top item display Input contains odd seconds" duration="2"/>
+    <testCase name="Berlin clock top item display Input contains even seconds" duration="0"/>
   </file>
 </testExecutions>
