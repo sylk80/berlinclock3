@@ -40,20 +40,22 @@ And('the second row is filled with O', () => {
     expect(greeting[1][0]).toBe("O")
 })
 
-/*Given('the API endpoint /time', () => {})
+Given('the API endpoint /time', () => {})
 
-When('I request the time for 00:00:00', () => {
-    mockDateSecond(dateSpy,0)
+When('I request the time for 05:00:00', () => {
+    mockDateHours(hourSpy,5)
+    mockDateMinutes(minuteSpy,0)
+    mockDateSecond(secondSpy,0)
     greeting = show_berlinclock()
 })
 
-Then('the seconds lightbulb is ON', () => {
-    expect(greeting[0][0]).toBe("Y")
+Then('the second row is ON', () => {
+    expect(greeting[1]).toStrictEqual(["Y","O","O","O"])
 })
 
-And('the seconds is Y', () => {
-    expect(greeting[0][0]).toBe("Y")
-})*/
+And('the second row\'s first element is Y', () => {
+    expect(greeting[1][0]).toBe("Y")
+})
 
 After(() => {
     hourSpy.mockReset()
