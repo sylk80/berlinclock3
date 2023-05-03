@@ -59,4 +59,16 @@ describe('BerlinClock testing for second row...', () => {
     test('berlin clock\'s second row has 4 length', () => {
         expect(clockwork.rows[1]).toHaveLength(4);
     });
+    test('Berlin clock with time 04:xx:xx should have 0s in second row...', () => {
+        const clockwork2 = new Clockwork();
+        clockwork2.time.setHours(4)
+        clockwork2.addFiveHours()
+        expect(clockwork2.rows[1]).toStrictEqual(["O","O","O","O"]);
+    });
+    test('Berlin clock with time 05:00:00 should have Y in second rows first element...', () => {
+        const clockwork2 = new Clockwork();
+        clockwork2.time.setHours(5)
+        clockwork2.addFiveHours()
+        expect(clockwork2.rows[1][0]).toStrictEqual("Y");
+    });
 });
