@@ -26,7 +26,7 @@ Before(() => {
 Given('the API endpoint /time', () => {})
 
 When('I request the time for 05:59:59', () => {
-    mockDateHours(hourSpy,4)
+    mockDateHours(hourSpy,5)
     mockDateMinutes(minuteSpy,59)
     mockDateSecond(secondSpy,59)
     greeting = show_berlinclock()
@@ -38,6 +38,23 @@ Then('the third row is OFF', () => {
 
 And('the third row is filled with O', () => {
     expect(greeting[2][0]).toBe("O")
+})
+
+Given('the API endpoint /time', () => {})
+
+When('I request the time for 06:00:00', () => {
+    mockDateHours(hourSpy,6)
+    mockDateMinutes(minuteSpy,0)
+    mockDateSecond(secondSpy,0)
+    greeting = show_berlinclock()
+})
+
+Then('the third row is ON with 1 light', () => {
+    expect(greeting[2]).toStrictEqual(["R","O","O","O"])
+})
+
+And('the third row\'s first element is R', () => {
+    expect(greeting[2][0]).toBe("R")
 })
 
 After(() => {

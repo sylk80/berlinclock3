@@ -20,6 +20,9 @@ class Clockwork {
 
     addSingleHours() {
         this.rows[2] = ["O","O","O","O"]
+        if(this.time.getHours() > 5) {
+            this.rows[2][0] = "R"
+        }
     }
 
 

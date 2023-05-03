@@ -115,5 +115,17 @@ describe('BerlinClock testing for third row...', () => {
     test('berlin clock\'s third row has 4 length', () => {
         expect(clockwork.rows[2]).toHaveLength(4);
     });
+    test('Berlin clock with time 05:xx:xx should have Os in second row...', () => {
+        const clockwork2 = new Clockwork();
+        clockwork2.time.setHours(5)
+        clockwork2.addSingleHours()
+        expect(clockwork2.rows[2]).toStrictEqual(["O","O","O","O"]);
+    });
+    test('Berlin clock with time 06:xx:xx should have R in third row first element...', () => {
+        const clockwork2 = new Clockwork();
+        clockwork2.time.setHours(6)
+        clockwork2.addSingleHours()
+        expect(clockwork2.rows[2]).toStrictEqual(["R","O","O","O"]);
+    });
 });
 
