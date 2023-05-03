@@ -108,3 +108,12 @@ describe('BerlinClock testing for second row...', () => {
         expect(clockwork2.rows[1]).toStrictEqual(["O","O","O","O"]);
     });
 });
+
+describe('BerlinClock testing for third row...', () => {
+    const clockwork = new Clockwork();
+    clockwork.addSingleHours()
+    test('berlin clock\'s third row has 4 length', () => {
+        expect(clockwork.rows[2]).toHaveLength(4);
+    });
+});
+

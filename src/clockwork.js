@@ -18,6 +18,10 @@ class Clockwork {
         }
     }
 
+    addSingleHours() {
+        this.rows[2] = ["O","O","O","O"]
+    }
+
 
 }
 
@@ -25,6 +29,7 @@ const show_berlinclock = () => {
     let clockwork = new Clockwork();
     clockwork.addSeconds()
     clockwork.addFiveHours()
+    clockwork.addSingleHours()
     return clockwork.rows
 };
 
