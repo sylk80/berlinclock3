@@ -57,6 +57,43 @@ And('the third row\'s first element is R', () => {
     expect(greetingSingleHours[2][0]).toBe("R")
 })
 
+Given('the API endpoint /time', () => {})
+
+When('I request the time for 07:59:59', () => {
+    mockDateHours(hourSpy,7)
+    mockDateMinutes(minuteSpy,59)
+    mockDateSecond(secondSpy,59)
+    greetingSingleHours = show_berlinclock()
+})
+
+Then('the third row is ON with 2 light', () => {
+    expect(greetingSingleHours[2]).toStrictEqual(["R","R","O","O"])
+})
+
+And('the third row\'s second element is R', () => {
+    expect(greetingSingleHours[2][1]).toBe("R")
+})
+
+Given('the API endpoint /time', () => {})
+
+When('I request the time for 08:59:59', () => {
+    mockDateHours(hourSpy,8)
+    mockDateMinutes(minuteSpy,59)
+    mockDateSecond(secondSpy,59)
+    greetingSingleHours = show_berlinclock()
+})
+
+Then('the third row is ON with 3 light', () => {
+    expect(greetingSingleHours[2]).toStrictEqual(["R","R","R","O"])
+})
+
+And('the third row\'s third element is R', () => {
+    expect(greetingSingleHours[2][2]).toBe("R")
+})
+
+
+
+
 After(() => {
     hourSpy.mockReset()
     hourSpy.mockRestore()

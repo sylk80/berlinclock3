@@ -159,15 +159,22 @@ Berlin clock with time 05:xx:xx should have O in third row first element
 Berlin clock with time 06:00:00 should have R in third row first element
 
 
-## Component 8/9
+## Component 9/10
 
 :heavy_plus_sign: Given the API endpoint /time
 
-:construction: When I request the time for 05:xx:xx/6:00:00
+:construction: When I request the time for 07:xx:xx/08:xx:xx
 
-:heavy_exclamation_mark: Then the third row is OFF/ON
+:heavy_exclamation_mark: Then the third row is ON
 
-:heavy_exclamation_mark: And the third row is filled with O/ third row's first element is R
+:heavy_exclamation_mark: And the third row's first and second element is R / first and second and third element is R
+
+### Unit tests
+
+
+Berlin clock's third row has 4 length
+Berlin clock with time 07:xx:xx should have R in third row second element
+Berlin clock with time 08:xx:xx should have R in third row third element
 
 
 
