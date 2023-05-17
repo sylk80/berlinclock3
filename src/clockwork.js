@@ -20,14 +20,9 @@ class Clockwork {
     addSingleHours() {
         let hours= this.time.getHours()
         this.rows[2] = ["O","O","O","O"]
-        if(hours > 5) {
-            this.rows[2][0] = "R"
-        }
-        if(hours > 6) {
-            this.rows[2][1] = "R"
-        }
-        if(hours > 7) {
-            this.rows[2][2] = "R"
+        let singleHour = hours % 5
+        for(let hourindex = 0 ; hourindex < 4 ; hourindex++) {
+            this.rows[2][hourindex] = --singleHour >= 0 ? "R" : "O"
         }
     }
 

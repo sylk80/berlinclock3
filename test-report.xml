@@ -4,53 +4,19 @@
     <testCase name="Berlin clock third row display Its is below the first six hours" duration="3"/>
     <testCase name="Berlin clock third row display It is the first six hours" duration="1"/>
     <testCase name="Berlin clock third row display It is the first seven hours" duration="0"/>
-    <testCase name="Berlin clock third row display It is the first eight hours" duration="0"/>
-    <testCase name="Berlin clock third row display It is the first nine hours" duration="5">
-      <failure message="Error: expect(received).toStrictEqual(expected) // deep equality"><![CDATA[Error: expect(received).toStrictEqual(expected) // deep equality
-
-- Expected  - 1
-+ Received  + 1
-
-  Array [
-    "R",
-    "R",
-    "R",
--   "R",
-+   "O",
-  ]
-    at Object.stepFunction (/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/singlehourfeature.steps.js:107:36)
-    at /home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/node_modules/jest-cucumber/src/feature-definition-creation.ts:134:65
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
-    </testCase>
-    <testCase name="Berlin clock third row display It is the first ten hours" duration="1">
-      <failure message="Error: expect(received).toStrictEqual(expected) // deep equality"><![CDATA[Error: expect(received).toStrictEqual(expected) // deep equality
-
-- Expected  - 3
-+ Received  + 3
-
-  Array [
--   "O",
--   "O",
--   "O",
-+   "R",
-+   "R",
-+   "R",
-    "O",
-  ]
-    at Object.stepFunction (/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/singlehourfeature.steps.js:124:36)
-    at /home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/node_modules/jest-cucumber/src/feature-definition-creation.ts:134:65
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
-    </testCase>
+    <testCase name="Berlin clock third row display It is the first eight hours" duration="1"/>
+    <testCase name="Berlin clock third row display It is the first nine hours" duration="0"/>
+    <testCase name="Berlin clock third row display It is the first ten hours" duration="1"/>
   </file>
   <file path="/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/fivehoursfeature.steps.js">
-    <testCase name="Berlin clock second row display Its is below the first five hours" duration="6"/>
+    <testCase name="Berlin clock second row display Its is below the first five hours" duration="3"/>
     <testCase name="Berlin clock second row display Its is at the first five hours" duration="1"/>
-    <testCase name="Berlin clock second row display It is at the second five hours" duration="1"/>
+    <testCase name="Berlin clock second row display It is at the second five hours" duration="0"/>
     <testCase name="Berlin clock second row display It is at the third five hours" duration="1"/>
-    <testCase name="Berlin clock second row display It is at the fourth five hours" duration="0"/>
+    <testCase name="Berlin clock second row display It is at the fourth five hours" duration="1"/>
   </file>
   <file path="/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/secondfeature.steps.js">
     <testCase name="Berlin clock top item display Input contains odd seconds" duration="2"/>
-    <testCase name="Berlin clock top item display Input contains even seconds" duration="1"/>
+    <testCase name="Berlin clock top item display Input contains even seconds" duration="0"/>
   </file>
 </testExecutions>
