@@ -1,13 +1,13 @@
 const mockDateSecond = (dateSpy, seconds) => {
-    dateSpy.mockReturnValueOnce(seconds)
+    dateSpy.mockReturnValue(seconds)
 }
 
 const mockDateHours = (dateSpy, hours) => {
-    dateSpy.mockReturnValueOnce(hours)
+    dateSpy.mockReturnValue(hours)
 }
 
 const mockDateMinutes = (dateSpy, minutes) => {
-    dateSpy.mockReturnValueOnce(minutes)
+    dateSpy.mockReturnValue(minutes)
 }
 
 module.exports = {mockDateSecond, mockDateMinutes, mockDateHours}

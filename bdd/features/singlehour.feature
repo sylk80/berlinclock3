@@ -7,7 +7,7 @@ Feature: Berlin clock third row display
     Then the third row is OFF
     And the third row is filled with O
 
-  Scenario: Its is the first six hours
+  Scenario: It is the first six hours
     Given the API endpoint /time
     When I request the time for 06:00:00
     Then the third row is ON with 1 light

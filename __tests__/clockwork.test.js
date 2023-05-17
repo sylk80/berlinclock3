@@ -110,22 +110,26 @@ describe('BerlinClock testing for second row...', () => {
 });
 
 describe('BerlinClock testing for third row...', () => {
-    const clockwork = new Clockwork();
-    clockwork.addSingleHours()
     test('berlin clock\'s third row has 4 length', () => {
+        const clockwork = new Clockwork();
+        clockwork.addSingleHours()
         expect(clockwork.rows[2]).toHaveLength(4);
     });
     test('Berlin clock with time 05:xx:xx should have Os in second row...', () => {
         const clockwork2 = new Clockwork();
         clockwork2.time.setHours(5)
+        clockwork2.addSeconds()
+        clockwork2.addFiveHours()
         clockwork2.addSingleHours()
         expect(clockwork2.rows[2]).toStrictEqual(["O","O","O","O"]);
     });
     test('Berlin clock with time 06:xx:xx should have R in third row first element...', () => {
-        const clockwork2 = new Clockwork();
-        clockwork2.time.setHours(6)
-        clockwork2.addSingleHours()
-        expect(clockwork2.rows[2]).toStrictEqual(["R","O","O","O"]);
+        const clockwork3 = new Clockwork();
+        clockwork3.time.setHours(6)
+        clockwork3.addSeconds()
+        clockwork3.addFiveHours()
+        clockwork3.addSingleHours()
+        expect(clockwork3.rows[2]).toStrictEqual(["R","O","O","O"]);
     });
 });
 
