@@ -23,6 +23,12 @@ class Clockwork {
         if(hours > 5) {
             this.rows[2][0] = "R"
         }
+        if(hours > 6) {
+            this.rows[2][1] = "R"
+        }
+        if(hours > 7) {
+            this.rows[2][2] = "R"
+        }
     }
 
 

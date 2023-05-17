@@ -131,5 +131,21 @@ describe('BerlinClock testing for third row...', () => {
         clockwork3.addSingleHours()
         expect(clockwork3.rows[2]).toStrictEqual(["R","O","O","O"]);
     });
+    test('Berlin clock with time 07:xx:xx should have R in third row second element...', () => {
+        const clockwork4 = new Clockwork();
+        clockwork4.time.setHours(7)
+        clockwork4.addSeconds()
+        clockwork4.addFiveHours()
+        clockwork4.addSingleHours()
+        expect(clockwork4.rows[2]).toStrictEqual(["R","R","O","O"]);
+    });
+    test('Berlin clock with time 08:xx:xx should have R in third row second element...', () => {
+        const clockwork5 = new Clockwork();
+        clockwork5.time.setHours(8)
+        clockwork5.addSeconds()
+        clockwork5.addFiveHours()
+        clockwork5.addSingleHours()
+        expect(clockwork5.rows[2]).toStrictEqual(["R","R","R","O"]);
+    });
 });
 
