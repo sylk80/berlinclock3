@@ -38,6 +38,9 @@ Then('the third row is OFF', () => {
 
 And('the third row is filled with O', () => {
     expect(greetingSingleHours[2][0]).toBe("O")
+    expect(greetingSingleHours[2][1]).toBe("O")
+    expect(greetingSingleHours[2][2]).toBe("O")
+    expect(greetingSingleHours[2][3]).toBe("O")
 })
 
 Given('the API endpoint /time', () => {})
@@ -89,6 +92,43 @@ Then('the third row is ON with 3 light', () => {
 
 And('the third row\'s third element is R', () => {
     expect(greetingSingleHours[2][2]).toBe("R")
+})
+
+Given('the API endpoint /time', () => {})
+
+When('I request the time for 09:59:59', () => {
+    mockDateHours(hourSpy,9)
+    mockDateMinutes(minuteSpy,59)
+    mockDateSecond(secondSpy,59)
+    greetingSingleHours = show_berlinclock()
+})
+
+Then('the third row is ON with 4 light', () => {
+    expect(greetingSingleHours[2]).toStrictEqual(["R","R","R","R"])
+})
+
+And('the third row\'s fourth element is R', () => {
+    expect(greetingSingleHours[2][3]).toBe("R")
+})
+
+Given('the API endpoint /time', () => {})
+
+When('I request the time for 10:00:00', () => {
+    mockDateHours(hourSpy,10)
+    mockDateMinutes(minuteSpy,0)
+    mockDateSecond(secondSpy,0)
+    greetingSingleHours = show_berlinclock()
+})
+
+Then('the third row is OFF with 0 light', () => {
+    expect(greetingSingleHours[2]).toStrictEqual(["O","O","O","O"])
+})
+
+And('the third row is filled with O again', () => {
+    expect(greetingSingleHours[2][0]).toBe("O")
+    expect(greetingSingleHours[2][1]).toBe("O")
+    expect(greetingSingleHours[2][2]).toBe("O")
+    expect(greetingSingleHours[2][3]).toBe("O")
 })
 
 

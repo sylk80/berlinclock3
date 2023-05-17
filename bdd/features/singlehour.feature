@@ -24,3 +24,15 @@ Feature: Berlin clock third row display
     When I request the time for 08:59:59
     Then the third row is ON with 3 light
     And the third row's third element is R
+
+  Scenario: It is the first nine hours
+    Given the API endpoint /time
+    When I request the time for 09:59:59
+    Then the third row is ON with 4 light
+    And the third row's fourth element is R
+
+  Scenario: It is the first ten hours
+    Given the API endpoint /time
+    When I request the time for 10:00:00
+    Then the third row is OFF with 0 light
+    And the third row is filled with O again
