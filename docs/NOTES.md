@@ -194,5 +194,15 @@ Berlin clock with time 09:xx:xx should have R in third row fourth element
 Berlin clock with time 10:xx:xx should have 0 in third row's any element
 
 
+## Component 14/15
+
+:heavy_plus_sign: Given the API endpoint /time
+
+:construction: When I request the time for 00:00:xx/00:01:xx
+
+:heavy_exclamation_mark: Then the fourth row is OFF / The fourth row is ON with 1 light
+
+:heavy_exclamation_mark: And the fourth row's first element is 0 / Y
+
 
 
