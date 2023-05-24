@@ -250,4 +250,21 @@ Berlin clock with time 00:45:xx should have Y in first, second, fourth, fifth, s
 and R in third, sixth and ninth
 
 
+## Component 20/21
+
+:heavy_plus_sign: Given the API endpoint /time
+
+:construction: When I request the time for 00:00:xx/00:01:xx
+
+:heavy_exclamation_mark: Then the fifth row is OFF / on with 1 light
+
+:heavy_exclamation_mark: And the fifth row's first element is 0 / Y
+
+### Unit tests
+
+
+Berlin clock's fifth row has 4 length
+Berlin clock with time 00:00:xx should have 0 in fifth row first/any element
+Berlin clock with time 00:01:xx should have Y in fifth row's first element
+
 
