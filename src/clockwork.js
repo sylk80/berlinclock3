@@ -26,6 +26,9 @@ class Clockwork {
         }
     }
 
+    addFiveMinutes() {
+        this.rows[3] = ["O","O","O","O","O","O","O","O","O","O","O"]
+    }
 
 }
 
@@ -34,6 +37,7 @@ const show_berlinclock = () => {
     clockwork.addSeconds()
     clockwork.addFiveHours()
     clockwork.addSingleHours()
+    clockwork.addFiveMinutes()
     return clockwork.rows
 };
 

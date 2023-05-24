@@ -168,8 +168,20 @@ describe('BerlinClock testing for third row for single hours...', () => {
 describe('BerlinClock testing for fourth row for five minutes in hours...', () => {
     test('berlin clock\'s fourth row has 11 length', () => {
         const clockwork = new Clockwork();
-        clockwork.addQuarterHourMinutes()
+        clockwork.addFiveMinutes()
         expect(clockwork.rows[3]).toHaveLength(11);
+    });
+    test('Berlin clock with time 00:00:xx  should have Os the fourth row', () => {
+        const clockwork2 = new Clockwork();
+        clockwork2.time.setMinutes(0)
+        clockwork2.addFiveMinutes()
+        expect(clockwork2.rows[3]).toStrictEqual(["O","O","O","O","O","O","O","O","O","O","O"])
+    });
+    test('Berlin clock with time 00:05:xx  should have Y in the first element of the fourth row', () => {
+        const clockwork3 = new Clockwork();
+        clockwork3.time.setMinutes(5)
+        clockwork3.addFiveMinutes()
+        expect(clockwork3.rows[3]).toStrictEqual(["Y","O","O","O","O","O","O","O","O","O","O"])
     });
 });
 

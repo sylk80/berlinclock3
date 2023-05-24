@@ -198,7 +198,7 @@ Berlin clock with time 10:xx:xx should have 0 in third row's any element
 
 :heavy_plus_sign: Given the API endpoint /time
 
-:construction: When I request the time for 00:00:xx/00:01:xx
+:construction: When I request the time for 00:00:xx/00:05:xx
 
 :heavy_exclamation_mark: Then the fourth row is OFF / The fourth row is ON with 1 light
 
@@ -210,7 +210,7 @@ Berlin clock with time 10:xx:xx should have 0 in third row's any element
 
 Berlin clock's fourth row has 4 length
 Berlin clock with time 00:00:xx should have 0 in fourth row first/any element
-Berlin clock with time 00:01:xx should have Y in fourth row's first element
+Berlin clock with time 00:05:xx should have Y in fourth row's first element
 
 
 

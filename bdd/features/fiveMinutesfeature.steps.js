@@ -22,7 +22,7 @@ Before(() => {
 Given('the API endpoint /time', () => {})
 
 When('I request the time for 00:00:xx', () => {
-    mockDateMinutes(minuteSpy,59)
+    mockDateMinutes(minuteSpy,0)
     greeting = show_berlinclock()
 })
 
@@ -36,8 +36,8 @@ And('the fourth row is filled with O', () => {
 
 Given('the API endpoint /time', () => {})
 
-When('I request the time for 00:01:xx', () => {
-    mockDateMinutes(minuteSpy,1)
+When('I request the time for 00:05:xx', () => {
+    mockDateMinutes(minuteSpy,5)
     greeting = show_berlinclock()
 })
 

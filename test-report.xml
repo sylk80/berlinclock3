@@ -1,71 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/secondfeature.steps.js">
-    <testCase name="Berlin clock top item display Input contains odd seconds" duration="2"/>
-    <testCase name="Berlin clock top item display Input contains even seconds" duration="0"/>
-  </file>
-  <file path="/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/fivehoursfeature.steps.js">
-    <testCase name="Berlin clock second row display Its is below the first five hours" duration="4"/>
-    <testCase name="Berlin clock second row display Its is at the first five hours" duration="1"/>
-    <testCase name="Berlin clock second row display It is at the second five hours" duration="1"/>
-    <testCase name="Berlin clock second row display It is at the third five hours" duration="0"/>
-    <testCase name="Berlin clock second row display It is at the fourth five hours" duration="0"/>
-  </file>
-  <file path="/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/singlehourfeature.steps.js">
-    <testCase name="Berlin clock third row display Its is below the first six hours" duration="4"/>
-    <testCase name="Berlin clock third row display It is the first six hours" duration="1"/>
-    <testCase name="Berlin clock third row display It is the first seven hours" duration="1"/>
-    <testCase name="Berlin clock third row display It is the first eight hours" duration="1"/>
-    <testCase name="Berlin clock third row display It is the first nine hours" duration="0"/>
-    <testCase name="Berlin clock third row display It is the first ten hours" duration="0"/>
-  </file>
-  <file path="/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/fiveMinutesfeature.steps.js">
-    <testCase name="Berlin clock fourth row display Input contains zero minutes" duration="7">
+  <file path="/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/__tests__/clockwork.test.js">
+    <testCase name="BerlinClock testing for first row containing odd and even seconds... should be a Clockwork class..." duration="2"/>
+    <testCase name="BerlinClock testing for first row containing odd and even seconds... should be a show_berlinclock method..." duration="0"/>
+    <testCase name="BerlinClock testing for first row containing odd and even seconds... berlin clock should have access to time" duration="0"/>
+    <testCase name="BerlinClock testing for first row containing odd and even seconds... berlin clock should have rows" duration="0"/>
+    <testCase name="BerlinClock testing for first row containing odd and even seconds... berlin clock should have multiple rows" duration="1"/>
+    <testCase name="BerlinClock testing for first row containing odd and even seconds... berlin clock&apos;s first row has 1 length" duration="0"/>
+    <testCase name="BerlinClock testing for first row containing odd and even seconds... berlin clock should show rows when asked..." duration="0"/>
+    <testCase name="BerlinClock testing for first row containing odd and even seconds... Berlin clock with time xx:xx:x1 should have 0 in first row..." duration="1"/>
+    <testCase name="BerlinClock testing for first row containing odd and even seconds... Berlin clock with time xx:xx:x3 should have 0 in first row..." duration="0"/>
+    <testCase name="BerlinClock testing for first row containing odd and even seconds... Berlin clock with time xx:xx:00 should have Y in first row..." duration="0"/>
+    <testCase name="BerlinClock testing for first row containing odd and even seconds... Berlin clock with time xx:xx:02 should have Y in first row..." duration="0"/>
+    <testCase name="BerlinClock testing for second row for five hours each... berlin clock&apos;s second row has 4 length" duration="1"/>
+    <testCase name="BerlinClock testing for second row for five hours each... Berlin clock with time 04:xx:xx should have Os in second row..." duration="0"/>
+    <testCase name="BerlinClock testing for second row for five hours each... Berlin clock with time 04:59:59 should have O in second rows first element..." duration="0"/>
+    <testCase name="BerlinClock testing for second row for five hours each... Berlin clock with time 05:00:00 should have R in second rows first element..." duration="1"/>
+    <testCase name="BerlinClock testing for second row for five hours each... Berlin clock with time 10:00:00 should have R in second rows second element..." duration="0"/>
+    <testCase name="BerlinClock testing for second row for five hours each... Berlin clock with time 15:00:00 should have R in second rows third element..." duration="0"/>
+    <testCase name="BerlinClock testing for second row for five hours each... Berlin clock with time 20:00:00 should have R in second rows third element..." duration="0"/>
+    <testCase name="BerlinClock testing for second row for five hours each... Berlin clock with time 23:59:59 should have R in second rows all element..." duration="1"/>
+    <testCase name="BerlinClock testing for second row for five hours each... Berlin clock with time 00:00:00 should have R in second rows all element..." duration="0"/>
+    <testCase name="BerlinClock testing for third row for single hours... berlin clock&apos;s third row has 4 length" duration="0"/>
+    <testCase name="BerlinClock testing for third row for single hours... Berlin clock with time 05:xx:xx should have Os in second row..." duration="1"/>
+    <testCase name="BerlinClock testing for third row for single hours... Berlin clock with time 06:xx:xx should have R in third row first element..." duration="0"/>
+    <testCase name="BerlinClock testing for third row for single hours... Berlin clock with time 07:xx:xx should have R in third row second element..." duration="0"/>
+    <testCase name="BerlinClock testing for third row for single hours... Berlin clock with time 08:xx:xx should have R in third row third element..." duration="0"/>
+    <testCase name="BerlinClock testing for third row for single hours... Berlin clock with time 09:xx:xx should have R in third row fourth element..." duration="0"/>
+    <testCase name="BerlinClock testing for third row for single hours... Berlin clock with time 10:xx:xx should have O in every element of the third row..." duration="1"/>
+    <testCase name="BerlinClock testing for fourth row for five minutes in hours... berlin clock&apos;s fourth row has 11 length" duration="0"/>
+    <testCase name="BerlinClock testing for fourth row for five minutes in hours... Berlin clock with time 00:00:xx  should have Os the fourth row" duration="0"/>
+    <testCase name="BerlinClock testing for fourth row for five minutes in hours... Berlin clock with time 00:05:xx  should have Y in the first element of the fourth row" duration="3">
       <failure message="Error: expect(received).toStrictEqual(expected) // deep equality"><![CDATA[Error: expect(received).toStrictEqual(expected) // deep equality
 
-- Expected  - 13
-+ Received  +  1
+- Expected  - 1
++ Received  + 1
 
-- Array [
--   "O",
--   "O",
--   "O",
--   "O",
--   "O",
--   "O",
--   "O",
--   "O",
--   "O",
--   "O",
--   "O",
-- ]
-+ Array []
-    at Object.stepFunction (/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/fiveMinutesfeature.steps.js:30:25)
-    at /home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/node_modules/jest-cucumber/src/feature-definition-creation.ts:134:65
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
-    </testCase>
-    <testCase name="Berlin clock fourth row display Input contains one minute" duration="1">
-      <failure message="Error: expect(received).toStrictEqual(expected) // deep equality"><![CDATA[Error: expect(received).toStrictEqual(expected) // deep equality
-
-- Expected  - 13
-+ Received  +  1
-
-- Array [
+@@ -1,7 +1,7 @@
+  Array [
 -   "Y",
--   "O",
--   "O",
--   "O",
--   "O",
--   "O",
--   "O",
--   "O",
--   "O",
--   "O",
--   "O",
-- ]
-+ Array []
-    at Object.stepFunction (/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/bdd/features/fiveMinutesfeature.steps.js:45:25)
-    at /home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/node_modules/jest-cucumber/src/feature-definition-creation.ts:134:65
++   "O",
+    "O",
+    "O",
+    "O",
+    "O",
+    "O",
+    at Object.<anonymous> (/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/__tests__/clockwork.test.js:184:36)
+    at Object.asyncJestTest (/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (<anonymous>)
+    at mapper (/home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /home/sylk/IdeaProjects/xpfarm/20230412_berlinclock3/node_modules/jest-jasmine2/build/queueRunner.js:75:41
     at processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
     </testCase>
   </file>
