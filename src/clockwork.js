@@ -29,8 +29,9 @@ class Clockwork {
     addFiveMinutes() {
         this.rows[3] = ["O","O","O","O","O","O","O","O","O","O","O"]
         let minutes = this.time.getMinutes()
-        if(minutes === 5) {
-            this.rows[3][0] = "Y"
+        for(let minuteindex = 0 ; minuteindex < 4 ; minuteindex++) {
+            this.rows[3][minuteindex] = minutes - 5 >= 0 ? "Y" : "O"
+            minutes = minutes -5
         }
     }
 
