@@ -220,7 +220,7 @@ Berlin clock with time 00:05:xx should have Y in fourth row's first element
 
 :heavy_exclamation_mark: Then the fourth row is ON with 2/3 light
 
-:heavy_exclamation_mark: And the fourth row's  second element is Y and third element is 0 / Y
+:heavy_exclamation_mark: And the fourth row's  second element is Y and third element is 0 / R
 
 
 ### Unit tests
@@ -229,6 +229,25 @@ Berlin clock with time 00:05:xx should have Y in fourth row's first element
 Berlin clock's fourth row has 11 length
 Berlin clock with time 00:10:xx should have Y in fourth row's first and second element
 Berlin clock with time 00:15:xx should have Y in fourth row's first and second element and R in the third
+
+
+## Component 18/19
+
+:heavy_plus_sign: Given the API endpoint /time
+
+:construction: When I request the time for 00:30:xx/00:45:xx
+
+:heavy_exclamation_mark: Then the fourth row is ON with 6/9 light
+
+:heavy_exclamation_mark: And the fourth row's third and sixth element is R / third, sixth and ninth element is R
+
+### Unit tests
+
+
+Berlin clock's fourth row has 11 length
+Berlin clock with time 00:30:xx should have Y in first, second, fourth and fifth element and R in third and sixth
+Berlin clock with time 00:45:xx should have Y in first, second, fourth, fifth, seventh, eighth element 
+and R in third, sixth and ninth
 
 
 

@@ -195,5 +195,17 @@ describe('BerlinClock testing for fourth row for five minutes in hours...', () =
         clockwork4.addFiveMinutes()
         expect(clockwork4.rows[3]).toStrictEqual(["Y","Y","R","O","O","O","O","O","O","O","O"])
     });
+    test('Berlin clock with time 00:30:xx the fourth row\'s third and sixth element is R rest is yellow', () => {
+        const clockwork5 = new Clockwork();
+        clockwork5.time.setMinutes(30)
+        clockwork5.addFiveMinutes()
+        expect(clockwork5.rows[3]).toStrictEqual(["Y","Y","R","Y","Y","R","O","O","O","O","O"])
+    });
+    test('the fourth row\'s third, sixth and ninth element is R rest is yellow', () => {
+        const clockwork6 = new Clockwork();
+        clockwork6.time.setMinutes(45)
+        clockwork6.addFiveMinutes()
+        expect(clockwork6.rows[3]).toStrictEqual(["Y","Y","R","Y","Y","R","Y","Y","R","O","O"])
+    });
 });
 

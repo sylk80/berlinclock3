@@ -81,6 +81,49 @@ And('the fourth row\'s first two element is Y and the third is R', () => {
     expect(greeting[3][2]).toBe("R")
 })
 
+Given('the API endpoint /time', () => {})
+
+When('I request the time for 00:30:xx', () => {
+    mockDateMinutes(minuteSpy,30)
+    greeting = show_berlinclock()
+})
+
+Then('the fourth row is ON with 6 light', () => {
+    expect(greeting[3]).toStrictEqual(["Y","Y","R","Y","Y","R","O","O","O","O","O"])
+})
+
+And('the fourth row\'s third and sixth element is R rest is yellow', () => {
+    expect(greeting[3][0]).toBe("Y")
+    expect(greeting[3][1]).toBe("Y")
+    expect(greeting[3][2]).toBe("R")
+    expect(greeting[3][3]).toBe("Y")
+    expect(greeting[3][4]).toBe("Y")
+    expect(greeting[3][5]).toBe("R")
+})
+
+Given('the API endpoint /time', () => {})
+
+When('I request the time for 00:45:xx', () => {
+    mockDateMinutes(minuteSpy,45)
+    greeting = show_berlinclock()
+})
+
+Then('the fourth row is ON with 9 light', () => {
+    expect(greeting[3]).toStrictEqual(["Y","Y","R","Y","Y","R","Y","Y","R","O","O"])
+})
+
+And('the fourth row\'s third, sixth and ninth element is R rest is yellow', () => {
+    expect(greeting[3][0]).toBe("Y")
+    expect(greeting[3][1]).toBe("Y")
+    expect(greeting[3][2]).toBe("R")
+    expect(greeting[3][3]).toBe("Y")
+    expect(greeting[3][4]).toBe("Y")
+    expect(greeting[3][5]).toBe("R")
+    expect(greeting[3][6]).toBe("Y")
+    expect(greeting[3][7]).toBe("Y")
+    expect(greeting[3][8]).toBe("R")
+})
+
 After(() => {
     minuteSpy.mockReset()
     minuteSpy.mockRestore()
