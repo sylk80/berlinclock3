@@ -189,5 +189,11 @@ describe('BerlinClock testing for fourth row for five minutes in hours...', () =
         clockwork3.addFiveMinutes()
         expect(clockwork3.rows[3]).toStrictEqual(["Y","Y","O","O","O","O","O","O","O","O","O"])
     });
+    test('Berlin clock with time 00:15:xx  should have Y in the first two element of the fourth row and R in the third', () => {
+        const clockwork4 = new Clockwork();
+        clockwork4.time.setMinutes(15)
+        clockwork4.addFiveMinutes()
+        expect(clockwork4.rows[3]).toStrictEqual(["Y","Y","R","O","O","O","O","O","O","O","O"])
+    });
 });
 
