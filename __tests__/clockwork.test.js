@@ -1,7 +1,7 @@
 const { Clockwork, show_berlinclock} = require('../src/clockwork.js');
 const lang = require('lodash/lang');
 
-describe('BerlinClock testing for first row...', () => {
+describe('BerlinClock testing for first row containing odd and even seconds...', () => {
     const clockwork = new Clockwork();
     clockwork.addSeconds()
     test('should be a Clockwork class...', () => {
@@ -53,7 +53,7 @@ describe('BerlinClock testing for first row...', () => {
   });
 
 
-describe('BerlinClock testing for second row...', () => {
+describe('BerlinClock testing for second row for five hours each...', () => {
     const clockwork = new Clockwork();
     clockwork.addFiveHours()
     test('berlin clock\'s second row has 4 length', () => {
@@ -109,7 +109,7 @@ describe('BerlinClock testing for second row...', () => {
     });
 });
 
-describe('BerlinClock testing for third row...', () => {
+describe('BerlinClock testing for third row for single hours...', () => {
     test('berlin clock\'s third row has 4 length', () => {
         const clockwork = new Clockwork();
         clockwork.addSingleHours()
@@ -162,6 +162,14 @@ describe('BerlinClock testing for third row...', () => {
         clockwork7.addFiveHours()
         clockwork7.addSingleHours()
         expect(clockwork7.rows[2]).toStrictEqual(["O","O","O","O"]);
+    });
+});
+
+describe('BerlinClock testing for fourth row for five minutes in hours...', () => {
+    test('berlin clock\'s fourth row has 11 length', () => {
+        const clockwork = new Clockwork();
+        clockwork.addQuarterHourMinutes()
+        expect(clockwork.rows[3]).toHaveLength(11);
     });
 });
 

@@ -205,4 +205,12 @@ Berlin clock with time 10:xx:xx should have 0 in third row's any element
 :heavy_exclamation_mark: And the fourth row's first element is 0 / Y
 
 
+### Unit tests
+
+
+Berlin clock's fourth row has 4 length
+Berlin clock with time 00:00:xx should have 0 in fourth row first/any element
+Berlin clock with time 00:01:xx should have Y in fourth row's first element
+
+
 
