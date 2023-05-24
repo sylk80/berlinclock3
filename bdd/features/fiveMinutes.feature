@@ -12,3 +12,15 @@ And the fourth row is filled with O
     When I request the time for 00:05:xx
     Then the fourth row is ON with 1 light
     And the fourth row's first element is Y
+
+  Scenario: Input contains ten minute
+    Given the API endpoint /time
+    When I request the time for 00:10:xx
+    Then the fourth row is ON with 2 light
+    And the fourth row's second element is Y
+
+  Scenario: Input contains fifteen minute
+    Given the API endpoint /time
+    When I request the time for 00:15:xx
+    Then the fourth row is ON with 3 light
+    And the fourth row's first two element is Y and the third is R

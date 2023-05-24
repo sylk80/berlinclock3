@@ -208,9 +208,27 @@ Berlin clock with time 10:xx:xx should have 0 in third row's any element
 ### Unit tests
 
 
-Berlin clock's fourth row has 4 length
+Berlin clock's fourth row has 11 length
 Berlin clock with time 00:00:xx should have 0 in fourth row first/any element
 Berlin clock with time 00:05:xx should have Y in fourth row's first element
+
+## Component 16/17
+
+:heavy_plus_sign: Given the API endpoint /time
+
+:construction: When I request the time for 00:10:xx/00:15:xx
+
+:heavy_exclamation_mark: Then the fourth row is ON with 2/3 light
+
+:heavy_exclamation_mark: And the fourth row's  second element is Y and third element is 0 / Y
+
+
+### Unit tests
+
+
+Berlin clock's fourth row has 11 length
+Berlin clock with time 00:10:xx should have Y in fourth row's first and second element
+Berlin clock with time 00:15:xx should have Y in fourth row's first and second element and R in the third
 
 
 
