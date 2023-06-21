@@ -35,6 +35,15 @@ class Clockwork {
         }
     }
 
+    addSingleMinutes() {
+        this.rows[4] = ["O","O","O","O"]
+        let minutes = this.time.getMinutes()
+        let singleMinute = minutes % 5
+        for(let minuteindex = 0 ; minuteindex < 4 ; minuteindex++) {
+            this.rows[4][minuteindex] = --singleMinute >= 0 ? "Y" : "O"
+        }
+    }
+
 }
 
 const show_berlinclock = () => {
@@ -43,6 +52,7 @@ const show_berlinclock = () => {
     clockwork.addFiveHours()
     clockwork.addSingleHours()
     clockwork.addFiveMinutes()
+    clockwork.addSingleMinutes()
     return clockwork.rows
 };
 

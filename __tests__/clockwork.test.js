@@ -207,5 +207,25 @@ describe('BerlinClock testing for fourth row for five minutes in hours...', () =
         clockwork6.addFiveMinutes()
         expect(clockwork6.rows[3]).toStrictEqual(["Y","Y","R","Y","Y","R","Y","Y","R","O","O"])
     });
+
+    describe('BerlinClock testing for fifth row for single minutes in five minutes...', () => {
+        test('berlin clock\'s fifth row has 4 length', () => {
+            const clockwork = new Clockwork();
+            clockwork.addSingleMinutes()
+            expect(clockwork.rows[4]).toHaveLength(4);
+        });
+        test('Berlin clock with time 00:00:xx  should have Os the fifth row', () => {
+            const clockwork2 = new Clockwork();
+            clockwork2.time.setMinutes(0)
+            clockwork2.addSingleMinutes()
+            expect(clockwork2.rows[4]).toStrictEqual(["O","O","O","O"])
+        });
+        test('Berlin clock with time 00:01:xx should have Y in the first element of the fifth row', () => {
+            const clockwork2 = new Clockwork();
+            clockwork2.time.setMinutes(1)
+            clockwork2.addSingleMinutes()
+            expect(clockwork2.rows[4]).toStrictEqual(["Y","O","O","O"])
+        });
+    });
 });
 
